@@ -243,7 +243,7 @@ table .job-title {
   td {
     flex-basis: 100%;
   }
-  li{
+  li {
     list-style: none !important;
   }
 }
@@ -267,6 +267,7 @@ table .job-title {
   }
   .tech-item {
     flex-basis: 100%;
+    padding-right: 0;
   }
 }
 @media only screen and (max-width: 700px) {
@@ -279,51 +280,72 @@ table .job-title {
   }
 }
 @media only screen and (max-width: 600px) {
-  h5{
-    overflow-wrap: anywhere;
-  }
   .left-deco {
     width: 10px;
   }
-  .img-container{
+  .img-container {
     width: 120px;
     height: 120px;
   }
-  .left-content {
-    padding-left: 10px;
-    padding-right: 15.5px;
-  }
-  .right-header{
+  .right-header {
     padding-top: 35px;
+  }
+  .content {
+    flex-direction: column;
+  }
+  .left-content,
+  .right-content {
+    width: 100%;
+  }
+  .left-content {
+    padding: 20px;
   }
 }
 @media only screen and (max-width: 550px) {
-  .right-header-title,.right-content {
+  .right-header-title {
     padding: 0 10px;
   }
-  .right-header-deco{
+  .right-header-deco {
     font-size: 30px;
   }
 }
 @media only screen and (max-width: 500px) {
-  .img-container{
+  .img-container {
     width: 100px;
     height: 100px;
   }
-  .right-header{
+  .right-header {
     padding-top: 25px;
   }
-  .left-content {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
 }
+
 @media only screen and (max-width: 400px) {
-  .img-container{
-    width: 80px;
-    height: 80px;
+  .left-header {
+    padding-top: 0;
   }
-  .right-header{
-    padding-top: 20px;
+  .left-deco,
+  .right-deco {
+    display: none;
+  }
+  .img-container {
+    width: 100%;
+    height: 100%;
+    margin-right: 0;
+    padding: 0;
+  }
+  .img-container img {
+    height: 100%;
+    object-fit: fill;
+  }
+  .right-header {
+    padding-top: 0;
+    background: var(--secondary-color);
+  }
+  .right-header-title {
+    color: var(--lg-text-color);
+  }
+  .right-header-deco {
+    padding: 0 10px;
+    height: fit-content;
   }
 }
